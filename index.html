@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Siddhesh Kulkarni – Homoeopathy Consultations</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fbfaf2;--card:#fff;--ink:#16301e;--mute:#4d6354;--green:#0f5a2c;--lime:#3fb52e;--soft:#e3eed3;--line:#cfdcc6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1a13;--card:#16241b;--ink:#e8f2e6;--mute:#a3b8a8;--green:#7fd68a;--lime:#5fd04c;--soft:#1d3324;--line:#2b4234}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1a13;--card:#16241b;--ink:#e8f2e6;--mute:#a3b8a8;--green:#7fd68a;--lime:#5fd04c;--soft:#1d3324;--line:#2b4234}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari",sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;gap:8px;flex-wrap:wrap}
+.logo{font-weight:800;color:var(--green);font-size:1.15rem}
+.logo span{color:var(--lime)}
+nav a{color:var(--ink);text-decoration:none;margin-left:14px;font-size:.95rem}
+.langs{display:flex;gap:6px}
+.langs button{font:600 .85rem inherit;color:var(--green);background:transparent;border:1.5px solid var(--green);border-radius:20px;padding:4px 12px;cursor:pointer}
+.langs button.on{background:var(--green);color:var(--bg)}
+.hero{padding:48px 0 32px;display:grid;gap:24px;grid-template-columns:1.3fr 1fr;align-items:center}
+h1{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.15;margin:0 0 12px;color:var(--green)}
+.tag{color:var(--mute);margin:0 0 20px}
+.btn{display:inline-block;background:var(--green);color:var(--bg);padding:12px 22px;border:0;border-radius:10px;font:600 1rem inherit;text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--green);border:2px solid var(--green);margin-left:8px}
+.badge{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:20px}
+.badge b{color:var(--green);display:block}
+section{padding:36px 0}
+h2{color:var(--green);font-size:1.7rem;margin:0 0 16px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.price{display:flex;justify-content:space-between;align-items:center;background:var(--soft);border-radius:10px;overflow:hidden;margin-bottom:10px}
+.price span{padding:12px 16px;font-weight:600}
+.price b{background:var(--green);color:var(--bg);padding:12px 20px;font-size:1.3rem}
+form{display:grid;gap:12px}
+label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;width:100%}
+.row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.stars{display:flex;gap:4px;font-size:2rem;cursor:pointer;user-select:none}
+.stars span{color:var(--line)}
+.stars span.on{color:#e8a800}
+.note{font-size:.85rem;color:var(--mute);margin:0}
+[hidden]{display:none!important}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--mute);font-size:.9rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav{display:none}.btn.alt{margin:8px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="logo">Dr. <span>Siddhesh</span></div>
+<nav><a href="#book" data-i="nav_book"></a><a href="#fees" data-i="nav_fees"></a><a href="#review" data-i="nav_rev"></a><a href="#contact" data-i="nav_contact"></a></nav>
+<div class="langs" role="group" aria-label="Language"><button data-l="en">English</button><button data-l="hi">हिन्दी</button><button data-l="mr">मराठी</button></div></div></header>
+
+<main class="wrap">
+<div class="hero">
+<div>
+<h1 data-i="h1"></h1>
+<p class="tag" data-i="tag"></p>
+<a class="btn" href="#book" data-i="cta_book"></a><a class="btn alt" href="#review" data-i="cta_rev"></a>
+</div>
+<div class="badge"><b data-i="badge1"></b><span data-i="badge2"></span></div>
+</div>
+
+<section id="fees"><h2 data-i="fees_h"></h2>
+<div class="card" style="max-width:520px">
+<div class="price"><span data-i="fee_new"></span><b>₹600</b></div>
+<div class="price"><span data-i="fee_fu"></span><b>₹400</b></div>
+<p class="note" data-i="fee_note"></p>
+</div></section>
+
+<section id="book"><h2 data-i="book_h"></h2>
+<div class="card"><form id="bookForm">
+<div class="row"><label><span data-i="f_name"></span><input name="name" required></label>
+<label><span data-i="f_phone"></span><input name="phone" type="tel" required></label></div>
+<div class="row"><label><span data-i="f_type"></span><select name="type"><option value="Initial consultation (Rs 600)" data-i="o_new"></option><option value="Follow-up consultation (Rs 400)" data-i="o_fu"></option></select></label>
+<label><span data-i="f_mode"></span><select name="mode"><option value="Online" data-i="o_online"></option><option value="In-clinic" data-i="o_clinic"></option></select></label></div>
+<div class="row"><label><span data-i="f_date"></span><input name="date" type="date" required></label>
+<label><span data-i="f_time"></span><input name="time" type="time" required></label></div>
+<label><span data-i="f_lang"></span><select name="clang"><option value="English">English</option><option value="Hindi">हिन्दी (Hindi)</option><option value="Marathi">मराठी (Marathi)</option></select></label>
+<label><span data-i="f_concern"></span><textarea name="concern" rows="3"></textarea></label>
+<button class="btn" type="submit" data-i="b_book"></button>
+<p class="note" data-i="b_note"></p>
+</form></div></section>
+
+<section id="review"><h2 data-i="rev_h"></h2>
+<div class="grid">
+<div class="card" id="revList"><p style="margin-top:0"><b data-i="rev_e1"></b></p><p class="note" data-i="rev_e2"></p><p><a class="btn" id="gBtn" href="#" target="_blank" rel="noopener" data-i="g_btn" hidden></a></p></div>
+<div class="card"><form id="revForm">
+<label><span data-i="f_name"></span><input name="name" required></label>
+<div><div class="note" style="margin-bottom:4px"><b data-i="rating"></b></div><div class="stars" id="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div></div>
+<label><span data-i="f_review"></span><textarea name="text" rows="3" required></textarea></label>
+<button class="btn" type="submit" data-i="b_rev"></button>
+</form></div></div></section>
+
+<section id="contact"><h2 data-i="contact_h"></h2>
+<div class="grid">
+<div class="card"><b>Dr. Siddhesh Kulkarni, BHMS</b><br>Borivali</div>
+<div class="card"><span data-i="call"></span>: <a href="tel:+918779646306">+91 8779646306</a><br><span data-i="email"></span>: <a href="mailto:siddheshkulkarni13@gmail.com">siddheshkulkarni13@gmail.com</a><br><br><a class="btn" href="https://wa.me/918779646306" target="_blank" rel="noopener" data-i="chat"></a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© Dr. Siddhesh Girish Kulkarni. <span data-i="foot"></span></div></footer>
+
+<script>
+var NUM="918779646306";
+var T={
+en:{nav_book:"Book",nav_fees:"Fees",nav_rev:"Reviews",nav_contact:"Contact",
+h1:"Homoeopathy that treats your past, present and future.",
+tag:"Dr. Siddhesh Girish Kulkarni, BHMS. Online and in-clinic consultations in Borivali.",
+cta_book:"Book a consultation",cta_rev:"Leave a review",
+badge1:"Online and offline consultations",badge2:"Consult from anywhere by video or phone, or visit the clinic in Borivali.",
+fees_h:"Consultation fees (online)",fee_new:"Initial consultation (new patient)",fee_fu:"Follow-up consultation",
+fee_note:"The fee includes the cost of prescribed medicines, wherever applicable. Courier or delivery charges for dispatching medicines, if applicable, are payable separately by the patient.",
+book_h:"Book an appointment",f_name:"Your name",f_phone:"Phone / WhatsApp number",f_type:"Consultation type",
+o_new:"Initial consultation (₹600)",o_fu:"Follow-up consultation (₹400)",f_mode:"Mode",o_online:"Online",o_clinic:"In-clinic",
+f_date:"Preferred date",f_time:"Preferred time",f_lang:"Preferred language for consultation",f_concern:"Your health concern",
+b_book:"Send booking request on WhatsApp",
+b_note:"This opens WhatsApp with your details filled in, and the request goes straight to the doctor’s number. Please press Send. You will get a confirmation of the final slot.",
+rev_h:"Patient reviews",rev_e1:"Reviews will appear here.",rev_e2:"Share your experience and it will be added to this page after the doctor’s approval.",
+g_btn:"Review us on Google",rating:"Rating",f_review:"Your review",b_rev:"Submit review via WhatsApp",
+contact_h:"Contact and clinic",call:"WhatsApp / call",email:"Email",chat:"Chat on WhatsApp",
+foot:"Homoeopathy treats your past, present and future.",alert:"Please select a star rating."},
+hi:{nav_book:"बुक करें",nav_fees:"फीस",nav_rev:"समीक्षाएँ",nav_contact:"संपर्क",
+h1:"होम्योपैथी जो आपके अतीत, वर्तमान और भविष्य का इलाज करती है।",
+tag:"डॉ. सिद्धेश गिरीश कुलकर्णी, BHMS। बोरीवली में ऑनलाइन और क्लिनिक में परामर्श।",
+cta_book:"परामर्श बुक करें",cta_rev:"समीक्षा दें",
+badge1:"ऑनलाइन और ऑफलाइन परामर्श",badge2:"वीडियो या फोन से कहीं से भी परामर्श लें, या बोरीवली के क्लिनिक में आएँ।",
+fees_h:"परामर्श शुल्क (ऑनलाइन)",fee_new:"प्रारंभिक परामर्श (नया रोगी)",fee_fu:"फॉलो-अप परामर्श",
+fee_note:"शुल्क में निर्धारित दवाओं की कीमत शामिल है, जहाँ लागू हो। दवाएँ भेजने पर लगने वाला कूरियर या डिलीवरी शुल्क, यदि लागू हो, रोगी को अलग से देना होगा।",
+book_h:"अपॉइंटमेंट बुक करें",f_name:"आपका नाम",f_phone:"फोन / WhatsApp नंबर",f_type:"परामर्श का प्रकार",
+o_new:"प्रारंभिक परामर्श (₹600)",o_fu:"फॉलो-अप परामर्श (₹400)",f_mode:"माध्यम",o_online:"ऑनलाइन",o_clinic:"क्लिनिक में",
+f_date:"पसंदीदा तारीख",f_time:"पसंदीदा समय",f_lang:"परामर्श के लिए पसंदीदा भाषा",f_concern:"आपकी स्वास्थ्य समस्या",
+b_book:"WhatsApp पर बुकिंग अनुरोध भेजें",
+b_note:"यह WhatsApp खोलेगा जिसमें आपकी जानकारी भरी होगी और अनुरोध सीधे डॉक्टर के नंबर पर जाएगा। कृपया Send दबाएँ। अंतिम समय की पुष्टि आपको मिलेगी।",
+rev_h:"रोगियों की समीक्षाएँ",rev_e1:"समीक्षाएँ यहाँ दिखाई देंगी।",rev_e2:"अपना अनुभव साझा करें, डॉक्टर की मंज़ूरी के बाद इसे इस पेज पर जोड़ा जाएगा।",
+g_btn:"Google पर समीक्षा दें",rating:"रेटिंग",f_review:"आपकी समीक्षा",b_rev:"WhatsApp से समीक्षा भेजें",
+contact_h:"संपर्क और क्लिनिक",call:"WhatsApp / कॉल",email:"ईमेल",chat:"WhatsApp पर चैट करें",
+foot:"होम्योपैथी आपके अतीत, वर्तमान और भविष्य का इलाज करती है।",alert:"कृपया स्टार रेटिंग चुनें।"},
+mr:{nav_book:"बुक करा",nav_fees:"फी",nav_rev:"अभिप्राय",nav_contact:"संपर्क",
+h1:"होमिओपॅथी जी तुमच्या भूत, वर्तमान आणि भविष्याचा उपचार करते.",
+tag:"डॉ. सिद्धेश गिरीश कुलकर्णी, BHMS. बोरिवली येथे ऑनलाइन आणि क्लिनिकमध्ये सल्ला.",
+cta_book:"सल्ला बुक करा",cta_rev:"अभिप्राय द्या",
+badge1:"ऑनलाइन आणि ऑफलाइन सल्ला",badge2:"व्हिडिओ किंवा फोनवरून कुठूनही सल्ला घ्या, किंवा बोरिवली येथील क्लिनिकला भेट द्या.",
+fees_h:"सल्ला शुल्क (ऑनलाइन)",fee_new:"पहिला सल्ला (नवीन रुग्ण)",fee_fu:"फॉलो-अप सल्ला",
+fee_note:"शुल्कामध्ये लिहून दिलेल्या औषधांची किंमत समाविष्ट आहे, जिथे लागू असेल तिथे. औषधे पाठवण्यासाठी लागणारे कुरिअर किंवा डिलिव्हरी शुल्क, लागू असल्यास, रुग्णाने स्वतंत्रपणे द्यायचे आहे.",
+book_h:"अपॉइंटमेंट बुक करा",f_name:"तुमचे नाव",f_phone:"फोन / WhatsApp क्रमांक",f_type:"सल्ल्याचा प्रकार",
+o_new:"पहिला सल्ला (₹600)",o_fu:"फॉलो-अप सल्ला (₹400)",f_mode:"पद्धत",o_online:"ऑनलाइन",o_clinic:"क्लिनिकमध्ये",
+f_date:"पसंतीची तारीख",f_time:"पसंतीची वेळ",f_lang:"सल्ल्यासाठी पसंतीची भाषा",f_concern:"तुमची आरोग्य समस्या",
+b_book:"WhatsApp वर बुकिंग विनंती पाठवा",
+b_note:"हे WhatsApp उघडेल, त्यात तुमची माहिती भरलेली असेल आणि विनंती थेट डॉक्टरांच्या नंबरवर जाईल. कृपया Send दाबा. अंतिम वेळेची पुष्टी तुम्हाला मिळेल.",
+rev_h:"रुग्णांचे अभिप्राय",rev_e1:"अभिप्राय येथे दिसतील.",rev_e2:"तुमचा अनुभव सांगा, डॉक्टरांच्या मंजुरीनंतर तो या पानावर जोडला जाईल.",
+g_btn:"Google वर अभिप्राय द्या",rating:"रेटिंग",f_review:"तुमचा अभिप्राय",b_rev:"WhatsApp वरून अभिप्राय पाठवा",
+contact_h:"संपर्क आणि क्लिनिक",call:"WhatsApp / कॉल",email:"ईमेल",chat:"WhatsApp वर चॅट करा",
+foot:"होमिओपॅथी तुमच्या भूत, वर्तमान आणि भविष्याचा उपचार करते.",alert:"कृपया स्टार रेटिंग निवडा."}
+};
+var lang="en";
+try{var s=localStorage.getItem("lang");if(s&&T[s])lang=s;}catch(e){}
+function setLang(l){
+lang=l;try{localStorage.setItem("lang",l);}catch(e){}
+document.documentElement.lang=l;
+document.querySelectorAll("[data-i]").forEach(function(el){el.textContent=T[l][el.getAttribute("data-i")];});
+document.querySelectorAll(".langs button").forEach(function(b){b.classList.toggle("on",b.dataset.l===l);});
+var sel=document.querySelector('select[name="clang"]');if(sel)sel.selectedIndex={en:0,hi:1,mr:2}[l];
+}
+document.querySelectorAll(".langs button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l);});});
+setLang(lang);
+var GOOGLE_REVIEW_URL="";
+var gb=document.getElementById("gBtn");
+if(GOOGLE_REVIEW_URL.indexOf("https://")===0){gb.href=GOOGLE_REVIEW_URL;gb.hidden=false;}
+var REVIEWS=[]; /* approved reviews: {name:"",rating:5,text:""} */
+function stars5(n){return "★★★★★".slice(0,n)+"☆☆☆☆☆".slice(0,5-n);}
+function renderReviews(){
+if(!REVIEWS.length)return;
+var box=document.getElementById("revList");box.textContent="";
+var sum=0;REVIEWS.forEach(function(r){sum+=r.rating;});
+var h=document.createElement("p");h.style.cssText="margin:0 0 12px;font-weight:700";
+h.textContent=(sum/REVIEWS.length).toFixed(1)+" ★  ("+REVIEWS.length+")";box.appendChild(h);
+REVIEWS.forEach(function(r){
+var d=document.createElement("div");d.style.cssText="border-top:1px solid var(--line);padding:10px 0";
+var s=document.createElement("div");s.style.color="#e8a800";s.textContent=stars5(r.rating);
+var t=document.createElement("p");t.style.margin="4px 0";t.textContent=r.text;
+var n=document.createElement("div");n.className="note";n.textContent="— "+r.name;
+d.appendChild(s);d.appendChild(t);d.appendChild(n);box.appendChild(d);});
+}
+renderReviews();
+function wa(msg){window.open("https://wa.me/"+NUM+"?text="+encodeURIComponent(msg),"_blank");}
+document.getElementById("bookForm").addEventListener("submit",function(e){
+e.preventDefault();var f=new FormData(e.target);
+wa("New appointment request\nName: "+f.get("name")+"\nPhone: "+f.get("phone")+"\nType: "+f.get("type")+"\nMode: "+f.get("mode")+"\nDate: "+f.get("date")+"\nTime: "+f.get("time")+"\nPreferred language: "+f.get("clang")+"\nConcern: "+(f.get("concern")||"-"));});
+var rating=0,stars=document.querySelectorAll("#stars span");
+stars.forEach(function(s,i){s.addEventListener("click",function(){rating=i+1;stars.forEach(function(x,j){x.classList.toggle("on",j<rating);});});});
+document.getElementById("revForm").addEventListener("submit",function(e){
+e.preventDefault();if(!rating){alert(T[lang].alert);return;}
+var f=new FormData(e.target);
+wa("New patient review\nName: "+f.get("name")+"\nRating: "+rating+"/5\nReview: "+f.get("text"));});
+</script>
+</body>
+</html>
