@@ -6,46 +6,50 @@
 <title>Dr. Siddhesh Kulkarni – Homoeopathy Consultations</title>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
---bg:#fbfaf2;--card:#fff;--ink:#16301e;--mute:#4d6354;--green:#0f5a2c;--lime:#3fb52e;--soft:#e3eed3;--line:#cfdcc6}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1a13;--card:#16241b;--ink:#e8f2e6;--mute:#a3b8a8;--green:#7fd68a;--lime:#5fd04c;--soft:#1d3324;--line:#2b4234}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1a13;--card:#16241b;--ink:#e8f2e6;--mute:#a3b8a8;--green:#7fd68a;--lime:#5fd04c;--soft:#1d3324;--line:#2b4234}
+color-scheme:light;
+--bg:#fff;--card:#fff;--ink:#0b2352;--mute:#516482;--navy:#0a2a66;--blue:#0a6cdc;--blue2:#2b93ee;--soft:#eaf4ff;--line:#dbe8f7;--shadow:0 8px 24px rgba(20,90,180,.09)}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari",sans-serif}
 .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header{box-shadow:0 2px 14px rgba(20,90,180,.08);position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
 header .wrap{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;gap:8px;flex-wrap:wrap}
-.logo{font-weight:800;color:var(--green);font-size:1.15rem}
-.logo span{color:var(--lime)}
+.logo{font-weight:800;color:var(--navy);font-size:1.15rem}
+.logo span{color:var(--blue)}
+nav a:hover{color:var(--blue)}
 nav a{color:var(--ink);text-decoration:none;margin-left:14px;font-size:.95rem}
 .langs{display:flex;gap:6px}
-.langs button{font:600 .85rem inherit;color:var(--green);background:transparent;border:1.5px solid var(--green);border-radius:20px;padding:4px 12px;cursor:pointer}
-.langs button.on{background:var(--green);color:var(--bg)}
-.hero{padding:48px 0 32px;display:grid;gap:24px;grid-template-columns:1.3fr 1fr;align-items:center}
-h1{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.15;margin:0 0 12px;color:var(--green)}
+.langs button{font:600 .85rem inherit;color:var(--blue);background:transparent;border:1.5px solid var(--blue);border-radius:20px;padding:4px 12px;cursor:pointer}
+.langs button.on{background:var(--blue);color:#fff}
+.hero{padding:48px 0 32px;margin-bottom:12px;background:#eaf4ff;box-shadow:0 0 0 100vmax #eaf4ff;clip-path:inset(0 -100vmax);display:grid;gap:24px;grid-template-columns:1.3fr 1fr;align-items:center}
+h1{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.15;margin:0 0 12px;color:var(--navy)}
 .tag{color:var(--mute);margin:0 0 20px}
-.btn{display:inline-block;background:var(--green);color:var(--bg);padding:12px 22px;border:0;border-radius:10px;font:600 1rem inherit;text-decoration:none;cursor:pointer}
-.btn.alt{background:transparent;color:var(--green);border:2px solid var(--green);margin-left:8px}
-.badge{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:20px}
-.badge b{color:var(--green);display:block}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--blue2),var(--blue) 60%);color:#fff;padding:12px 22px;border:0;border-radius:999px;font:600 1rem inherit;text-decoration:none;cursor:pointer}
+.btn.alt{background:#fff;color:var(--navy);border:1.5px solid var(--blue);margin-left:8px}
+.badge{background:var(--card);box-shadow:var(--shadow);border:1px solid var(--line);border-radius:16px;padding:20px}
+.badge b{color:var(--blue);display:block}
 section{padding:36px 0}
-h2{color:var(--green);font-size:1.7rem;margin:0 0 16px}
+h2{color:var(--navy);font-size:1.7rem;margin:0 0 16px}
 .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card{background:var(--card);box-shadow:var(--shadow);border:1px solid var(--line);border-radius:14px;padding:20px}
 .price{display:flex;justify-content:space-between;align-items:center;background:var(--soft);border-radius:10px;overflow:hidden;margin-bottom:10px}
 .price span{padding:12px 16px;font-weight:600}
-.price b{background:var(--green);color:var(--bg);padding:12px 20px;font-size:1.3rem}
+.price b{background:var(--blue);color:#fff;padding:12px 20px;font-size:1.3rem}
 form{display:grid;gap:12px}
 label{font-weight:600;font-size:.9rem;display:grid;gap:4px}
-input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;width:100%}
+input,select,textarea{font:inherit;color:var(--ink);background:#f6faff;border:1px solid var(--line);border-radius:8px;padding:10px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue2);outline-offset:1px}
+#book{background:linear-gradient(135deg,#3a9bee,#0a64d0);border-radius:20px;padding:28px 20px;margin:12px 0}
+#book h2{color:#fff}
+a{color:var(--blue)}
 .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
 .stars{display:flex;gap:4px;font-size:2rem;cursor:pointer;user-select:none}
 .stars span{color:var(--line)}
 .stars span.on{color:#e8a800}
 .note{font-size:.85rem;color:var(--mute);margin:0}
 [hidden]{display:none!important}
-footer{border-top:1px solid var(--line);padding:24px 0;color:var(--mute);font-size:.9rem}
-@media(max-width:700px){.hero{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav{display:none}.btn.alt{margin:8px 0 0}}
+footer{background:var(--navy);padding:24px 0;color:#d6e6fb;font-size:.9rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav{display:none}.hero .btn{margin:0 8px 8px 0}}
 </style>
 </head>
 <body>
